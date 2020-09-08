@@ -1,0 +1,46 @@
+# Basic workflow that:
+# --> lints the markdown in the README file and all other Markdown files
+# --> builds the PDF of all of the slides
+# --> release the PDF of all of the slides
+name: release
+
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - '*'
+
+# A workflow run is made up of one or more jobs
+# that can run sequentially or in parallel
+jobs:
+  # The workflow contains a single job called "build"
+  build:
+    # The runner will run on the latest version of Ubuntu
+    runs-on: ubuntu-latest
+
+    # Define the steps run in the workflow
+    steps:
+      # Checkout out the code in the repository
+      # Checkout the submodule for the bibliography
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+      # Run the mdl linting tool, which references
+      # the .mdlrc file stored in the repo's root
+      # for further configuration details
+      - name: Run mdl
+        uses: actionshub/markdownlint@master
+      # Install LaTeX and the required Hack font
+      - name: Install building tools
+        run: sudo apt-get install texlive-latex-extra fonts-hack-ttf texlive-fonts-recommended texlive-fonts-extra lmodern texlive-luatex texlive-xetex latexmk
+      # Build the presentation with the Makefile
+      - name: Build the presentation
+        run: make
+      # Release a PDF of the presentations
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: cs302-week-one.pdf
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
