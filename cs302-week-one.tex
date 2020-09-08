@@ -1,0 +1,246 @@
+\documentclass[14pt,aspectratio=169]{beamer}
+
+\usepackage{pgfpages}
+\usepackage{fancyvrb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usetheme{auriga}
+\usecolortheme{auriga}
+
+\setbeamercolor{background canvas}{bg=lightgray}
+
+% define some colors for a consistent theme across slides
+\definecolor{red}{RGB}{181, 23, 0}
+\definecolor{blue}{RGB}{0, 118, 186}
+\definecolor{gray}{RGB}{146, 146, 146}
+
+\title{Web Development: \\ Web Programming Tools}
+
+\author{{\bf Gregory M. Kapfhammer}}
+
+\institute[shortinst]{{\bf Department of Computer Science, Allegheny College}}
+
+\begin{document}
+
+{
+  \setbeamercolor{page number in head/foot}{fg=background canvas.bg}
+  \begin{frame}
+    \titlepage
+  \end{frame}
+}
+
+%% Slide
+%
+\begin{frame}{Technical Question}
+  %
+  \begin{center}
+    %
+    {\large How do I install and use the industry-standard programming tools
+    that will help me to design, implement, test, and maintain mobile-ready web
+    sites?}
+    %
+  \end{center}
+  %
+  \vspace{2ex}
+  %
+  \begin{center}
+    %
+    \small Let's learn more about version control, text editors, Docker, the
+    Markdown language for technical writing, and web programming languages!
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Version Control with Git and GitHub}
+%
+  \begin{itemize}
+    %
+    \item Benefits of version control systems
+      %
+    \item Using Git and GitHub
+      \begin{itemize}
+        \item Git tracks versions of files in directories
+        \item GitHub enables sharing and collaboration
+        \item Industry standard tools used in all assignments
+      \end{itemize}
+      %
+    \item Challenges of version control systems
+      %
+  \end{itemize}
+%
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Editing Web Languages with VSCode}
+%
+  \begin{itemize}
+    %
+    \item Popularity of VSCode according to StackOverflow
+      %
+    \item Using the VSCode development environment
+      \begin{itemize}
+        \item Edit Markdown, HTML, CSS, and JavaScript files
+        \item Commit changes to a GitHub repository
+        \item Remote collaboration with the Live Share extension
+      \end{itemize}
+      %
+    \item Get started by downloading VSCode from \url{https://code.visualstudio.com/}
+      %
+  \end{itemize}
+%
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Running GatorGrader and Tools with Docker}
+%
+  \begin{itemize}
+    %
+    \item Popularity of Docker according to StackOverflow
+      %
+    \item Using the Docker during web development
+      \begin{itemize}
+        \item Download a Docker container from DockerHub
+        \item Use a Docker container once to grade the work repository
+        \item Enter into a Docker container to perform multiple commands
+      \end{itemize}
+      %
+    \item Get started by downloading Docker from \url{https://docs.docker.com/desktop/}
+      %
+  \end{itemize}
+%
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Using Markdown and GitHub for Documentation}
+%
+  \begin{itemize}
+    %
+    \item A language for describing how to format rendered text
+      %
+    \item Benefits of using Markdown for documentation
+      \begin{itemize}
+        \item Simple and powerful approach to technical writing
+        \item Formats both standard textual elements and source code
+        \item GitHub natively renders Markdown in a Git repository
+      \end{itemize}
+      %
+    \item Learn more about how to use Markdown by reading \url{https://www.markdownguide.org/}
+      %
+  \end{itemize}
+%
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Using HTML, CSS, and JavaScript}
+%
+  \begin{itemize}
+    %
+    \item Multiple languages in the web development ``stack''
+      %
+    \item Role that each language plays in a web site
+      \begin{itemize}
+        \item HTML: Content and tags that assign meaning to the content
+        \item CSS: Rules and queries that style the HTML content
+        \item JavaScript: Functions that facilitate user interaction
+      \end{itemize}
+      %
+    \item Code at \url{https://github.com/gkapfham/www.gregorykapfhammer.com/}
+      %
+  \end{itemize}
+%
+\end{frame}
+
+%% Slide
+%
+\begin{frame}{Technical Question}
+  %
+  \begin{center}
+    %
+    {\large How do I install and use the industry-standard programming tools
+    that will help me to design, implement, test, and maintain mobile-ready web
+    sites?}
+    %
+  \end{center}
+  %
+  \vspace{2ex}
+  %
+  \begin{center}
+    %
+    \small Let's look at some specific examples of how to use Git and GitHub!
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Creating a Clone of a GitHub Repository}
+  %
+  \setlength{\leftmarginii}{0.5cm}
+  %
+  \begin{itemize}
+    %
+    \item ``{\tt git clone}'' transfers from GitHub to your computer
+      %
+    \item Cloning a Git repository on GitHub
+      %
+      {\tiny
+        \begin{itemize}
+          \item {\tt git clone git@github.com:Allegheny-Computer-Science-302-F2020/cs302-F2020-plans.git}
+            %
+          \item {\tt git clone https://github.com/Allegheny-Computer-Science-302-F2020/cs302-F2020-plans.git}
+        \end{itemize}
+      }
+      %
+    \item What are the differences in these ``{\tt git clone}'' commands? What are the trade-offs in using them?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Handy Commands to Support GitHub Use}
+  %
+  \begin{itemize}
+    %
+    \item ``{\tt git push -u origin master}'' transfers content from your computer
+      to the GitHub servers
+      %
+    \item ``{\tt git commit cs302-week-one.tex}'' commits the changes in the
+      file to your GitHub repository
+      %
+    \item ``{\tt git checkout -b feat/add-week-one-slides}'' creates a branch in
+      a GitHub repository
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Mastering These Software Tools}
+  %
+  \begin{itemize}
+    %
+    \item Install VS Code, participate in a live share, edit Markdown
+      %
+    \item Install Git command-line client, use in terminal \& VS Code
+      %
+    \item Clone a GitHub repository and open its code in VS Code
+      %
+    \item Run a web server and track its behavior in your terminal
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+\end{document}
