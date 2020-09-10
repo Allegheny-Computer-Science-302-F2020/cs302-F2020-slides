@@ -128,7 +128,7 @@
       %
     \item ``Keep the computation close to the data''
       ensures that a web application minimizes response time and reduces
-      network traffic. Can you elucidate the trade-offs?
+      network traffic. Data compression? Overall trade-offs?
       %
   \end{itemize}
   %
@@ -288,6 +288,102 @@ github.com.             1       IN      A       140.82.114.3
     \normalsize \noindent Was data quickly routed between client and server? \\
     %
     \normalsize \noindent Does data transmission exhibit a lot of variability? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Uniform Resource Locators for Web Sites}
+  %
+  \begin{itemize}
+    %
+    \item A standard way to represent a human-readable address
+      %
+    \item The URL contains several standard components
+      %
+      \begin{itemize}
+        %
+        \item Protocol
+          %
+        \item Port
+          %
+        \item Path
+          %
+        \item Query string
+          %
+        \item Fragments
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item Can you find these components in the URLs in web sites?
+      Do all URLs always use all of these components?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Hypertext Transfer Protocol}
+  %
+  \begin{itemize}
+    %
+    \item {\tt GET} requests normally involve requesting a resource
+      %
+    \vspace*{-.1in}
+    \item {\tt POST} requests normally involve submitting content
+      %
+    \vspace*{-.1in}
+    \item Examples of HTTP response codes
+      %
+      \begin{itemize}
+        %
+        \item 200: OK request for resource
+          %
+        \item 301 or 307: Moved permanently or temporarily
+          %
+        \item 401: Unauthorized access
+          %
+        \item 404: Resource not found
+          %
+        \item 500: Internal server error
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item Can you find these response codes in your server output?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Response Codes for HTTP Servers}
+  \normalsize
+  \hspace*{-.15in}
+  \begin{minipage}{6in}
+    \vspace*{.25in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\scriptsize]{text}
+  Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+  127.0.0.1 - - [08/Sep/2020 12:47:17] "GET / HTTP/1.1" 200 -
+  127.0.0.1 - - [08/Sep/2020 12:47:17] code 404, message File not found
+  127.0.0.1 - - [08/Sep/2020 12:47:17] "GET /favicon.ico HTTP/1.1" 404 -
+  127.0.0.1 - - [08/Sep/2020 12:47:19] "GET /web-development.html HTTP/1.1" 200 -
+    \end{minted}
+  \end{minipage}
+  \vspace*{.25in}
+  \begin{center}
+    %
+    \normalsize \noindent What is the IP address of this server? \\
+    \normalsize \noindent What are some of the evident return codes? \\
+    \normalsize \noindent What kind of content can an HTTP server return? \\
     %
   \end{center}
   %
