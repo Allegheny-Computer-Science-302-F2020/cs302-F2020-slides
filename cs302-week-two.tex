@@ -173,7 +173,7 @@
   \hspace*{-.65in}
   \begin{minipage}{6in}
     \vspace*{.25in}
-    \begin{minted}[mathescape, numbersep=5pt, fontsize=\footnotesize]{console}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\footnotesize]{text}
         inet 192.168.0.180  netmask 255.255.255.0  broadcast 192.168.0.255
         inet6 fe80::dff1:eed8:49fb:1265  prefixlen 64  scopeid 0x20<link>
         ether cc:f9:e4:9e:b0:97  txqueuelen 1000  (Ethernet)
@@ -189,6 +189,39 @@
     \normalsize \noindent What is the IP address of this computer? \\
     \normalsize \noindent What is the MAC address of this computer? \\
     \normalsize \noindent Does this computer transmit packets reliably? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Client Lookups for the Server Address}
+  \normalsize
+  \hspace*{-.25in}
+  \begin{minipage}{6in}
+    \vspace*{.15in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\footnotesize]{text}
+; <<>> DiG 9.16.6 <<>> github.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28755
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;github.com.                    IN      A
+
+;; ANSWER SECTION:
+github.com.             1       IN      A       140.82.114.3
+    \end{minted}
+  \end{minipage}
+  \vspace*{0in}
+  \begin{center}
+    %
+    \normalsize \noindent What is the IP address of {\tt github.com}? \\
     %
   \end{center}
   %
