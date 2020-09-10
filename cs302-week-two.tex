@@ -1,0 +1,86 @@
+\documentclass[14pt,aspectratio=169]{beamer}
+
+\usepackage{pgfpages}
+\usepackage{fancyvrb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usetheme{auriga}
+\usecolortheme{auriga}
+
+\setbeamercolor{background canvas}{bg=lightgray}
+
+% define some colors for a consistent theme across slides
+\definecolor{red}{RGB}{181, 23, 0}
+\definecolor{blue}{RGB}{0, 118, 186}
+\definecolor{gray}{RGB}{146, 146, 146}
+
+\title{Web Development: \\ How the Web Works}
+
+\author{{\bf Gregory M. Kapfhammer}}
+
+\institute[shortinst]{{\bf Department of Computer Science, Allegheny College}}
+
+\begin{document}
+
+{
+  \setbeamercolor{page number in head/foot}{fg=background canvas.bg}
+  \begin{frame}
+    \titlepage
+  \end{frame}
+}
+
+%% Slide
+%
+\begin{frame}{Technical Question}
+  %
+  \hspace*{.25in}
+  %
+  \begin{minipage}{5in}
+    %
+    \vspace*{.2in}
+    %
+    \begin{center}
+      %
+      {\large How do I connect the documented behavior of a web browser and a
+      web client (e.g., routing, request, and response) to their observed
+    behavior when using a simplified hypertext-transfer protocol (HTTP) server
+  and a standard web browser?}
+      %
+    \end{center}
+    %
+  \end{minipage}
+  %
+  \vspace{3ex}
+  %
+  \begin{center}
+    %
+    \small Let's learn more about complexities associated with the development,
+    deployment, and maintenance of modern web sites!
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Version Control with Git and GitHub}
+%
+  \begin{itemize}
+    %
+    \item Benefits of version control systems
+      %
+    \item Using Git and GitHub
+      \begin{itemize}
+        \item Git tracks versions of files in directories
+        \item GitHub enables sharing and collaboration
+        \item Industry standard tools used in all assignments
+      \end{itemize}
+      %
+    \item Challenges of version control systems
+      %
+  \end{itemize}
+%
+\end{frame}
+
+\end{document}
