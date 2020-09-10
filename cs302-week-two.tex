@@ -5,6 +5,9 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 
+\usepackage{minted}
+\usemintedstyle{tango}
+
 \usetheme{auriga}
 \usecolortheme{auriga}
 
@@ -159,6 +162,35 @@
       resolution!
       %
   \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Network Diagnostics for a Client}
+  \normalsize
+  \hspace*{-.65in}
+  \begin{minipage}{6in}
+    \vspace*{.25in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\footnotesize]{console}
+        inet 192.168.0.180  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 fe80::dff1:eed8:49fb:1265  prefixlen 64  scopeid 0x20<link>
+        ether cc:f9:e4:9e:b0:97  txqueuelen 1000  (Ethernet)
+        RX packets 11865  bytes 7807225 (7.4 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9960  bytes 1614279 (1.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    \end{minted}
+  \end{minipage}
+  \vspace*{.25in}
+  \begin{center}
+    %
+    \normalsize \noindent What is the IP address of this computer? \\
+    \normalsize \noindent What is the MAC address of this computer? \\
+    \normalsize \noindent Does this computer transmit packets reliably? \\
+    %
+  \end{center}
   %
 \end{frame}
 
