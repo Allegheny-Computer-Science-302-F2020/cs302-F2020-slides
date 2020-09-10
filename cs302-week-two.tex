@@ -121,13 +121,14 @@
         \item {\bf Client Request}: pages or web elements
         \item {\bf Server}: repository and command center
         \item {\bf Server Response}: pages or web elements
+        \item {\bf Protocols}: HTTP, HTTPS, SSL, TCP/IP
       \end{itemize}
       %
       \vspace*{-.2in}
       %
-    \item ``Keep the computation close to the data'' is a good rule of thumb for
-      ensuring that a web application minimizes response time and reduces
-      network traffic
+    \item ``Keep the computation close to the data''
+      ensures that a web application minimizes response time and reduces
+      network traffic. Can you elucidate the trade-offs?
       %
   \end{itemize}
   %
@@ -199,7 +200,7 @@
 \begin{frame}[fragile]
   \frametitle{Client Lookups for the Server Address}
   \normalsize
-  \hspace*{-.25in}
+  \hspace*{-.2in}
   \begin{minipage}{6in}
     \vspace*{.15in}
     \begin{minted}[mathescape, numbersep=5pt, fontsize=\footnotesize]{text}
@@ -226,5 +227,32 @@ github.com.             1       IN      A       140.82.114.3
   \end{center}
   %
 \end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Domain Name Server for a Client}
+  \normalsize
+  \hspace*{.15in}
+  \begin{minipage}{6in}
+    \vspace*{.25in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\footnotesize]{text}
+;; Query time: 20 msec
+;; SERVER: 72.23.14.75#53(72.23.14.75)
+;; WHEN: Tue Sep 08 12:50:01 EDT 2020
+;; MSG SIZE  rcvd: 55
+    \end{minted}
+  \end{minipage}
+  \vspace*{.25in}
+  \begin{center}
+    %
+    \normalsize \noindent What is the IP address of the computer's DNS server? \\
+    \normalsize \noindent What role does DNS play in the overall routing process? \\
+    \normalsize \noindent Can we learn more about packet transmission performance? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
 
 \end{document}
