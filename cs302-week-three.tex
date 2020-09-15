@@ -280,5 +280,36 @@
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Relative Referencing of External Files}
+  \normalsize
+  \hspace*{-.25in}
+  \begin{minipage}{6in}
+    \vspace*{.25in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\small]{html}
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="css/github.css" rel="stylesheet">
+    <link href="css/emoji.css" rel="stylesheet">
+    <title>Share Your Travels</title>
+  </head>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \normalsize \noindent The inclusion of additional files is relative to web
+    server's root\\
+    \normalsize \noindent This example assumes that the {\tt css/} directory
+    exists in the root\\
+    \normalsize \noindent What are the benefits to a hierarchical layout of
+    files and directories? What are the challenges of this approach?\\
+    %
+  \end{center}
+  %
+\end{frame}
 
 \end{document}
