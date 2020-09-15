@@ -41,6 +41,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: cs302-week-one.pdf, cs302-week-two.pdf
+          files: cs302-week-one.pdf, cs302-week-two.pdf cs302-week-three.pdf
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
