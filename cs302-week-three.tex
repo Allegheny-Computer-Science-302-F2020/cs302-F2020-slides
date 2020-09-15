@@ -193,4 +193,92 @@
 %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Programming HTML: Using the {\tt <head>} Tag}
+  \normalsize
+  \hspace*{-.25in}
+  \begin{minipage}{6in}
+    \vspace*{.25in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\small]{html}
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="css/github.css" rel="stylesheet">
+    <link href="css/emoji.css" rel="stylesheet">
+    <title>Share Your Travels</title>
+  </head>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \normalsize \noindent HTML tags are nested inside of the {\tt <head>} tag\\
+    \normalsize \noindent Some HTML tags can define the meta-data about the web page \\
+    \normalsize \noindent Other HTML tags define content displayed by the
+    browser \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Programming HTML: Using the {\tt <body>} Tag}
+  \normalsize
+  \hspace*{-.25in}
+  \begin{minipage}{6in}
+    \vspace*{.25in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\small]{html}
+    <body>
+      <h1>Share Your Travels</h1>
+      <h2>A Delta 757 lands at LAX on January 29th.</h2>
+      <img src="img/plane.jpg"/></a>
+    </body>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \normalsize \noindent The {\tt <body>} tag defines the region for a page's
+    content\\
+    \normalsize \noindent Many different tags can be nested inside of the {\tt
+    <body>} \\
+    \normalsize \noindent These tags define multi-level headers and include an
+    image\\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Programming HTML: Adding Extra Content}
+  \normalsize
+  \hspace*{-.25in}
+  \begin{minipage}{6in}
+    \vspace*{.25in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\small]{html}
+    <blockquote>
+      <p><b>By Ricardo on <time>Feb 8, 2018</time></b></p>
+      <p>Great photograph! How did you take it?</p>
+      <p>This photo rates as <i class="em em---1"></i></p>
+    </blockquote>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \normalsize \noindent HTML supports multiple levels of nesting content \\
+    \normalsize \noindent Let's explain the purpose of each tag in this example! \\
+    \normalsize \noindent Sometimes the use of an HTML tag is overloaded \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+
 \end{document}
