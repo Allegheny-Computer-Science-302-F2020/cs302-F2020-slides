@@ -341,4 +341,90 @@
 %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Programming HTML: Creating Nested Lists}
+  \normalsize
+  \hspace*{-.55in}
+  \begin{minipage}{6in}
+    \vspace*{.25in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\small]{html}
+    <ol>
+      <li><a href="https://www.lonelyplanet.com/"
+        target="_blank">Visit the Lonely Planet Site</a></li>
+      <li><a href="https://www.lonelyplanet.com/blog/"
+        target="_blank">Read the Lonely Planet Blog</a></li>
+    </ol>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \normalsize \noindent Each tag has an opening and a closing location \\
+    \normalsize \noindent This ordered list features hypertext references \\
+    \normalsize \noindent References to external pages have a name and a URL \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Programming HTML: Semantic Markup}
+  \normalsize
+  \hspace*{-.45in}
+  \begin{minipage}{6in}
+    \vspace*{-.15in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\small]{html}
+    <footer>
+      Created with <i class="em em-heart"></i>
+      and <i class="em em-coffee"></i> by Greg M. Kapfhammer
+    </footer>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \normalsize \noindent Semantic markup influences display and has meaning \\
+    \normalsize \noindent Examples include {\tt <nav>} and {\tt <main>} \\
+    \normalsize \noindent This source code segment defines the page's {\tt <footer>} \\
+    \normalsize \noindent What are the trade-offs associated with semantic markup? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Programming HTML: Using External Resources}
+  \normalsize
+  \hspace*{-.15in}
+  \begin{minipage}{6in}
+    \vspace*{.15in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\small]{html}
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="css/site.css" rel="stylesheet">
+    <link href="css/emoji.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?
+         family=Montserrat"
+        rel="stylesheet" type="text/css">
+  </head>
+    \end{minted}
+  \end{minipage}
+  \vspace*{-.05in}
+  \begin{center}
+    %
+    \normalsize \noindent Which of these resources are ``internal''? \\
+    \normalsize \noindent Which of these resources are ``external''? \\
+    \normalsize \noindent What are the trade-offs of using external resources? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
 \end{document}
