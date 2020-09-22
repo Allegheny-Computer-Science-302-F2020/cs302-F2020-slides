@@ -1,6 +1,6 @@
 .PHONY: main clean FORCE
 
-main: cs302-week-one.pdf cs302-week-two.pdf cs302-week-three.pdf
+main: cs302-week-one.pdf cs302-week-two.pdf cs302-week-three.pdf cs302-week-four.pdf
 
 %.pdf: FORCE
 	latexmk -pdflatex='lualatex -interaction nonstopmode --shell-escape' -pdf $(patsubst %.pdf,%.tex,$@)
