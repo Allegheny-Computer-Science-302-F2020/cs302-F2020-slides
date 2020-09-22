@@ -327,4 +327,150 @@ table {
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Exploring the Box Model in CSS: Paragraphs}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+p,
+ul {
+  border: 2px solid rebeccapurple;
+  padding: .5em;
+}
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What are the HTML tags that this selector styles? \\
+    %
+    \noindent Hey, the CSS rules apply to two HTML tags! \\
+    %
+    \noindent Can you find the key value pairs in this CSS code? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Exploring the Box Model in CSS: List Items}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+.block,
+li {
+  border: 2px solid blue;
+  padding: .5em;
+}
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What are the HTML tags that this selector styles? \\
+    %
+    \noindent Hey, the CSS rules apply to two HTML tags! \\
+    %
+    \noindent Can you find the key value pairs in this CSS code? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using CSS to Assign ``Flex'' to HTML Elements}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+ul {
+  display: flex;
+  list-style: none;
+}
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What are the HTML tags that this selector styles? \\
+    %
+    \noindent Can you find the key value pairs in this CSS code? \\
+    %
+    \noindent What is the meaning of {\tt display: flex;}? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Controlling the Display of Content with CSS}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+.block {
+  display: block;
+}
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What is the HTML tag that this selector styles? \\
+    %
+    \noindent Can you find the key value pairs in this CSS code? \\
+    %
+    \noindent What is the meaning of {\tt display: block;}? \\
+    %
+    \noindent HTML elements are either {\em block} or {\em inline}! \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Connecting CSS Rules to HTML Content}
+  \normalsize
+  \hspace*{.15in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\small]{html}
+<p>I am a paragraph. A short one.</p>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+<p>I am another paragraph.
+Some of the <span class="block">words</span>
+have been wrapped in a <span>span element</span>.</p>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What is the meaning of {\tt class="block"}? \\
+    %
+    \noindent  \url{https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model}
+    %
+  \end{center}
+  %
+\end{frame}
+
 \end{document}
