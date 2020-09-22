@@ -252,4 +252,79 @@ table {
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}{Interaction Among Different CSS Styles}
+  %
+  \begin{itemize}
+    %
+    \item How do we know which CSS rule to apply to an HTML element? Sometimes
+      it can be tricky! Try it out!
+      %
+      \vspace*{-.2in}
+      %
+    \item {\bf Styles}: author-created, user-defined, default browser
+      %
+      \vspace*{-.15in}
+      %
+    \item The ``cascading principles'' a browser follows:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Inheritance}: Property affects HTML element and its
+          descendants
+          %
+        \item {\bf Specificity}: More specific selector has more precedence
+          %
+        \item {\bf Location}: The most recent rules in a file have precedence
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item What about the use of the {\tt !important} decorator in CSS files?
+      Please use a browser's web development tools!
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{The CSS Box Model}
+  %
+  \begin{itemize}
+    %
+    \item How do we style the various ``boxes'' that exist inside of a web
+      page? What are these boxes? One example: {\tt <div>}
+      %
+      \vspace*{-.2in}
+      %
+    \item The attributes of an HTML element's box:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Border}: the box surround all sides of an element
+          %
+        \item {\bf Margin}: the space outside the border around an element
+          %
+        \item {\bf Padding}: The space inside of the border around the element
+          %
+        \item {\bf Height}: how tall is the inner box of an element
+          %
+        \item {\bf Width}: how wide is the inner box of an element
+          %
+        \item {\bf Background}: what is the color or image of an element
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item You can use a browser's web development tools to see the CSS3 box
+      model and to interact with the styles
+      %
+  \end{itemize}
+  %
+\end{frame}
+
 \end{document}
