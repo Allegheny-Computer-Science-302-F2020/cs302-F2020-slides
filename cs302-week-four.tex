@@ -2,11 +2,14 @@
 
 \usepackage{pgfpages}
 \usepackage{fancyvrb}
+
 \usepackage{tikz}
 \usepackage{pgfplots}
 
 \usepackage{minted}
 \usemintedstyle{tango}
+
+\usepackage{graphicx}
 
 \usetheme{auriga}
 \usecolortheme{auriga}
@@ -473,4 +476,50 @@ have been wrapped in a <span>span element</span>.</p>
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}{Revisiting the CSS Box Model}
+  %
+  \begin{itemize}
+    %
+    \item Reviewing the attributes of an HTML element's box:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Border}: the box surround all sides of an element
+          %
+        \item {\bf Margin}: the space outside the border around an element
+          %
+        \item {\bf Padding}: The space inside of the border around the element
+          %
+        \item {\bf Height}: how tall is the inner box of an element
+          %
+        \item {\bf Width}: how wide is the inner box of an element
+          %
+        \item {\bf Background}: what is the color or image of an element
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item Make sure to distinguish between {\em padding} and {\em margin}!
+      %
+      \vspace*{-.2in}
+      %
+    \item Remember TRBL! What do browser's dev tools look like? How do
+      you use them during development and debugging?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+\begin{frame}{Using Dev Tools in Chrome}
+  %
+  \begin{figure}
+    \centering
+    \includegraphics[scale=.085]{images/chrome-dev-tools.png}
+    \caption{The figure's caption}
+  \end{figure}
+  %
+\end{frame}
 \end{document}
