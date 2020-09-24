@@ -522,4 +522,108 @@ have been wrapped in a <span>span element</span>.</p>
   \end{figure}
   %
 \end{frame}
+
+% Slide
+%
+\begin{frame}{CSS Text Styling}
+  %
+  \begin{itemize}
+    %
+    \item How do we style the text that exists on a web page?
+      %
+      \vspace*{-.2in}
+      %
+    \item Two approaches to styling textual elements using CSS:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Font Properties}: style a site's font and its appearance
+          %
+        \item {\bf Paragraph Properties}: modify all text style regardless of
+          the font
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item The font family and the font size are two major adjustments made
+      through CSS selectors and properties
+      %
+      \vspace*{-.2in}
+      %
+    \item There are multiple ways to specify the font size like percentages,
+      pixels, points, or ems. The default text size is often 16 pixels. CSS can
+      adjust that {\em relatively} or {\em absolutely}!
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using CSS to Define Font Properties}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.15in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+body {
+ font-size: 16px;
+ text-size-adjust: 100%;
+ font-family: 'IBM Plex Sans',
+              sans-serif;
+ line-height: 1.6;
+ word-wrap: break-word;
+}
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{-.05in}
+  %
+  \begin{center}
+    %
+    \noindent How does this style the font of a web page? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Using CSS to Style Paragraph Properties}
+  %
+  \begin{itemize}
+    %
+    \item How do we style the text that exists on a web page?
+      %
+      \vspace*{-.2in}
+      %
+    \item Two approaches to styling textual elements using CSS:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Font Properties}: style a site's font and its appearance
+          %
+        \item {\bf Paragraph Properties}: modify all text style regardless of
+          the font
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item The font family and the font size are two major adjustments made
+      through CSS selectors and properties
+      %
+      \vspace*{-.2in}
+      %
+    \item There are multiple ways to specify the font size like percentages,
+      pixels, points, or ems. The default text size is often 16 pixels. CSS can
+      adjust that {\em relatively} or {\em absolutely}!
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+
 \end{document}
