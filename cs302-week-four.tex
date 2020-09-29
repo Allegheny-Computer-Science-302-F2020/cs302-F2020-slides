@@ -548,8 +548,8 @@ have been wrapped in a <span>span element</span>.</p>
       %
       \vspace*{-.2in}
       %
-    \item The font family and the font size are two major adjustments made
-      through CSS selectors and properties
+    \item The {\em font family} and the {\em font size} are two major
+      adjustments made through CSS selectors and properties
       %
       \vspace*{-.2in}
       %
@@ -626,16 +626,45 @@ body {
       %
       \vspace*{-.2in}
       %
-    \item The font family and the font size are two major adjustments made
-      through CSS selectors and properties
+    \item CSS supports the adjustment of various font properties, including the
+      weight and size of the font
       %
       \vspace*{-.2in}
       %
-    \item There are multiple ways to specify the font size like percentages,
-      pixels, points, or ems. The default text size is often 16 pixels. CSS can
-      adjust that {\em relatively} or {\em absolutely}!
+    \item CSS enables the adjustment of a paragraph's font properties, including
+      the spacing between letters or words, the paragraph alignment, and the
+      paragraph's indentation
       %
   \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Adjusting Body Fonts with CSS}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.15in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+body strong {
+  font-weight: bold;
+}
+
+body h1, h2, h3 {
+  font-family: "Merriweather", serif;
+}
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{-.05in}
+  %
+  \begin{center}
+    %
+    \noindent How does this style different fonts in a web page? \\
+    %
+  \end{center}
   %
 \end{frame}
 
