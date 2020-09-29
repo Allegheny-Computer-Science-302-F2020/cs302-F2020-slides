@@ -186,7 +186,7 @@ td, th {
 % Slide
 %
 \begin{frame}[fragile]
-  \frametitle{Changing Table Fonts and Alignment Using CSS}
+  \frametitle{Styling Table Headers and Cells with CSS}
   \normalsize
   \hspace*{.25in}
   \begin{minipage}{6in}
@@ -206,6 +206,62 @@ td {
     \noindent What is the difference between {\tt <td>} and {\tt <th>}?\\
     %
     \noindent How does this CSS change the style of the HTML table?\\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Adding Patterns to Table Rows}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+tr:nth-child(even) td {
+            background: #F1F1F1;
+            }
+tr:nth-child(odd) td {
+            background: #FEFEFE;
+            }
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What is the purpose of the {\tt nth-child} designator?\\
+    %
+    \noindent How does this CSS change the style of the HTML table?\\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Adding Interactivity to Table Rows}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+tr td:hover {
+            background: #777;
+            color: #FFF;
+            }
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What is the difference between {\tt <tr>} and {\tt <td>}?\\
+    %
+    \noindent When does a person ``hover'' on a table in a web page?\\
+    %
+    \noindent How does this CSS add a small measure of table interaction?\\
     %
   \end{center}
   %
