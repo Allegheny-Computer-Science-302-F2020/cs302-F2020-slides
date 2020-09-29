@@ -104,4 +104,83 @@
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Programming Tables Using HTML}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+<table>
+  <tr>
+    <td>Passport</td>
+    <td>Magazine</td>
+    <td>Pants</td>
+  </tr>
+</table>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What are the HTML tags used in this table?\\
+    \noindent How would this table look when rendered by the browser?\\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Styling Tables Using CSS}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+table {
+  color: #333;
+  width: 600px;
+  border: solid #777;
+  border-width: 1pt 0pt 0pt 1pt;
+  border-spacing: 0;
+  margin: 30px;
+  padding: 5px 5px 5px 5px;
+}
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Styling HTML Tables Using CSS}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+td, th {
+  border: 1px solid transparent;
+  height: 30px;
+}
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What are the HTML tags that are styled by this CSS?\\
+    %
+    \noindent How does this CSS change the style of the HTML table?\\
+    %
+    \noindent What is the purpose of the {\tt border} styling code?\\
+    %
+  \end{center}
+  %
+\end{frame}
+
 \end{document}
