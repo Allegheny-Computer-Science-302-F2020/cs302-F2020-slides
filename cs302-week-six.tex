@@ -177,12 +177,11 @@
 % Slide
 %
 \begin{frame}[fragile]
-  \frametitle{Programming HTML Forms Using}
+  \frametitle{Programming HTML Forms Using Formspree}
   \normalsize
-  % \hspace*{.25in}
   \begin{minipage}{6in}
     \vspace*{.1in}
-    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
     <form
       action="https://formspree.io/
               gkapfham@
@@ -194,10 +193,86 @@
     </form>
     \end{minted}
   \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Creating Labels and Form Controls}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+<label>Name</label>
+<input type="text" name="name">
+<label>Email</label>
+<input type="email" name="_replyto">
+    \end{minted}
+  \end{minipage}
   \vspace*{.05in}
   \begin{center}
     %
-    % \noindent What are the HTML tags used in this table?\\
+    \noindent This content would exist inside of a {\tt <form>} \\
+    %
+    \noindent Forms can contain labels for content and form controls \\
+    %
+    \noindent CSS from Bootstrap can control form control layout \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Creating Dropdown Lists in Forms}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+<label>What is your preferred city?
+</label>
+<input type="text" name="city"
+  list="cities"/>
+<datalist id="cities">
+  <option>Calcutta</option>
+  <option>Calgary</option>
+  <option>London</option>
+</datalist>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    % \noindent This content would exist inside of a {\tt <form>} \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Creating Radio Buttons in Forms}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+<label>What is your favorite continent?
+</label>
+<input type="radio"
+  name="continent" value="1">
+  North America
+<input type="radio"
+  name="continent" value="2">
+  South America
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    % \noindent This content would exist inside of a {\tt <form>} \\
     %
   \end{center}
   %
