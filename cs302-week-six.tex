@@ -177,26 +177,27 @@
 % Slide
 %
 \begin{frame}[fragile]
-  \frametitle{Programming Tables Using HTML}
+  \frametitle{Programming HTML Forms Using}
   \normalsize
-  \hspace*{.25in}
+  % \hspace*{.25in}
   \begin{minipage}{6in}
-    \vspace*{.2in}
+    \vspace*{.1in}
     \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
-<table>
-  <tr>
-    <td>Passport</td>
-    <td>Magazine</td>
-    <td>Pants</td>
-  </tr>
-</table>
+    <form
+      action="https://formspree.io/
+              gkapfham@
+              allegheny.edu"
+      method="POST">
+      Share your Views!
+      <input type="submit"
+      value="Submit">
+    </form>
     \end{minted}
   \end{minipage}
   \vspace*{.05in}
   \begin{center}
     %
-    \noindent What are the HTML tags used in this table?\\
-    \noindent How would this table look when rendered by the browser?\\
+    % \noindent What are the HTML tags used in this table?\\
     %
   \end{center}
   %
