@@ -1,0 +1,139 @@
+\documentclass[14pt,aspectratio=169]{beamer}
+
+\usepackage{pgfpages}
+\usepackage{fancyvrb}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usepackage{minted}
+\usemintedstyle{tango}
+
+\usepackage{graphicx}
+
+\usetheme{auriga}
+\usecolortheme{auriga}
+
+\setbeamercolor{background canvas}{bg=lightgray}
+
+% define some colors for a consistent theme across slides
+\definecolor{red}{RGB}{181, 23, 0}
+\definecolor{blue}{RGB}{0, 118, 186}
+\definecolor{gray}{RGB}{146, 146, 146}
+
+\title{Web Development: \\ Creating Tables and Forms}
+
+\author{{\bf Gregory M. Kapfhammer}}
+
+\institute[shortinst]{{\bf Department of Computer Science, Allegheny College}}
+
+\begin{document}
+
+{
+  \setbeamercolor{page number in head/foot}{fg=background canvas.bg}
+  \begin{frame}
+    \titlepage
+  \end{frame}
+}
+
+% Slide
+%
+\begin{frame}{Technical Question}
+  %
+  \hspace*{.25in}
+  %
+  \vspace*{.1in}
+  %
+  \begin{minipage}{4.5in}
+  %
+  \begin{center}
+    %
+    {\large How can I follow industry best practices to use both HTML and CSS to
+    implement tables that display formatted content and forms that receive and
+  verify user input?}
+    %
+  \end{center}
+  %
+  \end{minipage}
+  %
+  \vspace{2ex}
+  %
+  \begin{center}
+    %
+    \small Let's learn how to combine CSS and HTML to create tables and forms!\\
+    \small We focused on tables last week and now forms this week!\\
+    \small Since web development in cumulative, please review all previous content!\\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{User Input with HTML5 Forms}
+  %
+  \begin{itemize}
+    %
+    \item Before HTML5, user input and form customization was limited; now
+      multiple tags, CSS styling options, and services exist. Static sites
+      present additional challenges!
+      %
+      \vspace*{-.15in}
+      %
+    \item Some examples of form components in HTML:
+      %
+      \begin{itemize}
+        %
+        \item Lists, radio buttons, and checkboxes
+          %
+        \item Form submission buttons and controls
+          %
+        \item Controls for input of text and file uploads
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item What type of content is best requested in a form?
+      %
+      \vspace*{-.2in}
+      %
+    \item What are not the most appropriate uses of a form?
+      %
+      \vspace*{-.2in}
+      %
+    \item What are the challenges associated with creating a form?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Programming Tables Using HTML}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+<table>
+  <tr>
+    <td>Passport</td>
+    <td>Magazine</td>
+    <td>Pants</td>
+  </tr>
+</table>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What are the HTML tags used in this table?\\
+    \noindent How would this table look when rendered by the browser?\\
+    %
+  \end{center}
+  %
+\end{frame}
+
+\end{document}
