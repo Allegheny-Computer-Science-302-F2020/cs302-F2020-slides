@@ -278,4 +278,133 @@
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Creating Checkboxes in Forms}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+<label>What country will you visit?
+</label>
+<input type="checkbox"
+  name="country" value="canada">Canada
+<input type="checkbox"
+  name="country" value="france">France
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What convention do we follow for picking form controls? \\
+    %
+    \noindent How do ensure correctness of layout and user interaction? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Creating Text Areas in Forms}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+<label>What is your travel story?
+</label>
+<textarea rows="3"
+  cols="80"
+  name="story">
+  Share your travel story
+  </textarea>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent How do we ensure that forms do not submit malicious content? \\
+    %
+    \noindent How do we ensure that forms provide a good user experience? \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using Bootstrap to Layout Forms}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{html}
+  <div class="form-group">
+    <label for="name">Name</label>
+    <div class="row">
+      <div class="col">
+        <input type="text"
+          class="form-control"
+          name="name" id="name"
+          placeholder="Your name" required>
+      </div>
+    </div>
+  </div>
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Defining Placeholders for Form Inputs}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{html}
+  <div class="form-group">
+    <label for="reply_to">Email</label>
+    <div class="row">
+      <div class="col">
+        <input type="email"
+           class="form-control"
+           name="reply_to" id="reply_to"
+           placeholder="user.name@example.com"
+           required>
+      </div>
+    </div>
+  </div>
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Specifying Data Types for Form Inputs}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{html}
+  <div class="form-group">
+    <label for="web_site">Web Site</label>
+    <div class="row">
+      <div class="col">
+        <input type="url"
+           class="form-control"
+           name="web_site" id="web_site"
+           placeholder="Your web site"
+           required>
+      </div>
+    </div>
+  </div>
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
 \end{document}
