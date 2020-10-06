@@ -407,4 +407,29 @@
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Specifying Data Types for Form Inputs}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{html}
+  <div class="form-group">
+    <label for="time">How many minutes
+       did it take to complete survey?</label>
+    <div class="row">
+      <div class="col">
+        <input type="number"
+           class="form-control"
+           name="time" id="time"
+           min=1 step=1>
+      </div>
+    </div>
+  </div>
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
 \end{document}
