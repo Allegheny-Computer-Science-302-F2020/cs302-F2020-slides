@@ -481,6 +481,7 @@ $dark:      darken($secondary, 5%);
   %
 \end{frame}
 
+
 % Slide
 %
 \begin{frame}[fragile]
@@ -543,6 +544,70 @@ fill="#ef6c00" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2
 2.3 2.3 5.2 2.6 6.5 1
 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6
 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Compression of the Images on a Web Site}
+  %
+  \begin{itemize}
+    %
+    \item Compression makes the size of an image smaller
+      %
+      \vspace*{-.2in}
+      %
+    \item Smaller images reduce latency and increase throughput
+      %
+      \vspace*{-.2in}
+      %
+    \item Lossy compression normally reduces image quality
+      %
+      \vspace*{-.2in}
+      %
+    \item Multiple tools support various image compressors
+      %
+      \vspace*{-.2in}
+      %
+    \item Additional resources to consider for image compression:
+      %
+      \begin{itemize}
+        %
+        \item Read {\em Essential Image Optimization} by Addy Osmani
+          %
+        \item Use image compression tools like {\tt optipng} and {\tt pngquant}
+          %
+        \item Run experiments to evaluate the trade-offs of compression
+          %
+        \item Use Lighthouse and PageSpeed insights to quantify trade-offs
+          %
+      \end{itemize}
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using Gulp to Compress a Site's Images}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.05in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{javascript}
+gulp.task('imagecompress', function() {
+  return gulp.src(IMAGES_OPTIMIZED)
+    .pipe(imagemin([
+      imagemin.optipng(),
+      imagemin.jpegtran(),
+      imageminPngquant(speed = 1),
+      imageminJpegRecompress(accurate = true,
+                             loops = 10),
+    ]))
+    .pipe(gulp.dest(IMAGES_DEST));
+});
     \end{minted}
   \end{minipage}
   %
