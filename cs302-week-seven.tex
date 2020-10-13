@@ -70,39 +70,38 @@
 
 % Slide
 %
-\begin{frame}{User Input with HTML5 Forms}
+\begin{frame}{Digital Representation of Images}
   %
   \begin{itemize}
     %
-    \item Before HTML5, user input and form customization was limited; now
-      multiple tags, CSS styling options, and services exist. Static sites
-      present additional challenges!
+    \item What is digital image? Ultimately, it is individual components that
+      are represented as binary numbers!
       %
       \vspace*{-.15in}
       %
-    \item Some examples of form components in HTML:
+    \item The fundamental components of a digital image:
       %
       \begin{itemize}
         %
-        \item Lists, radio buttons, and checkboxes
+        \item {\bf Raster (or Bitmap) Image}: individual components are pixels
           %
-        \item Form submission buttons and controls
+        \item {\bf Vector Image}: individual components are vector objects
           %
-        \item Controls for input of text and file uploads
+        \item {\bf Trade-offs}: when should you pick one of these formats?
           %
       \end{itemize}
       %
       \vspace*{-.2in}
       %
-    \item What type of content is best requested in a form?
+    \item The pixels of a raster image can be directly manipulated
       %
       \vspace*{-.2in}
       %
-    \item What are not the most appropriate uses of a form?
+    \item Browsers often provide better support for raster images
       %
       \vspace*{-.2in}
       %
-    \item What are the challenges associated with creating a form?
+    \item But, vector images are resolution independent!
       %
   \end{itemize}
   %
@@ -110,55 +109,41 @@
 
 % Slide
 %
-\begin{frame}{The Lifecycle of Form Interaction}
+\begin{frame}{Models for Representing Colors on the Web}
   %
   \begin{itemize}
     %
-    \item Does the web server provide a database for storage?
+    \item We encode a color as a sequence of numbers
       %
       \vspace*{-.2in}
       %
-    \item Does the web client support JavaScript or form validation?
+    \item What are the benefits of encoding color as a number?
       %
       \vspace*{-.2in}
       %
-    \item The lifecycle of form creation and interaction:
+    \item Popular color models for web pages:
       %
       \begin{itemize}
         %
-        \item Developer creates a form and publishes to a web page
+        \item {\bf RGB}: Use the hexadecimal {\tt \#RRGGBB} format
           %
-        \item Developer connects the form to a data storage endpoint
-          %
-        \item Person views the form and submits the required content
-          %
-        \item The web client validates the form's current content
-          %
-        \item The web client transmits form content to the server
-          %
+        \item {\bf CYMK}: Use cyan, magenta, yellow, and black for print
+         %
+        \item {\bf HSL}: Use hue, saturation, and lightness in CSS3
+         %
+        \item We adopt the RGB color model for web development!
+         %
       \end{itemize}
       %
       \vspace*{-.25in}
       %
-    \item What are the challenges associated with creating a form?
+    \item You can also manipulate a color by changing its opacity
       %
       \vspace*{-.25in}
       %
-    \item What are the trade-offs associated with HTML forms?
+    \item You can display colors differently through use of a gradient
       %
   \end{itemize}
-  %
-\end{frame}
-
-% Slide
-%
-\begin{frame}{Using Formspree in Static Sites}
-  %
-  \begin{figure}
-    \centering
-    \includegraphics[scale=.08]{images/formspree.png}
-    \caption{The figure's caption}
-  \end{figure}
   %
 \end{frame}
 
