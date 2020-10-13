@@ -194,5 +194,50 @@ $cyan:   #17a2b8 !default;
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Defining Base Colors for a Web Site}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+$primary:   $orange;
+$secondary: $gray-900;
+$success:   $green !default;
+$info:      $blue;
+$warning:   $yellow !default;
+$danger:    $red !default;
+$light:     $gray-200;
+$dark:      darken($secondary, 5%);
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Defining Color Gradients in CSS}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{css}
+.lineargradientgreen {
+  background-image:
+     linear-gradient(green, white);
+  border: solid #777;
+  border-width: 2pt 2pt 2pt 2pt;
+  display: table-cell;
+  height: 500px;
+  text-align: center;
+  vertical-align: middle;
+  width: 500px;
+}
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
 
 \end{document}
