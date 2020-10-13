@@ -150,23 +150,49 @@
 % Slide
 %
 \begin{frame}[fragile]
-  \frametitle{Programming HTML Forms Using Formspree}
+  \frametitle{Defining Shades in ``Sassy'' CSS Files}
   \normalsize
   \begin{minipage}{6in}
     \vspace*{.1in}
-    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
-    <form
-      action="https://formspree.io/
-              gkapfham@
-              allegheny.edu"
-      method="POST">
-      Share your Views!
-      <input type="submit"
-      value="Submit">
-    </form>
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{css}
+$white: #fff !default;
+$gray-100: material-color("grey", "100");
+$gray-200: material-color("grey", "200");
+$gray-300: material-color("grey", "300");
+$gray-400: material-color("grey", "400");
+$gray-500: material-color("grey", "500");
+$gray-600: material-color("grey", "600");
+$gray-700: material-color("grey", "700");
+$gray-800: material-color("grey", "800");
+$gray-900: material-color("grey", "900");
+$black: #000 !default;
     \end{minted}
   \end{minipage}
   %
 \end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Defining Colors in ``Sassy'' CSS Files}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{css}
+$blue:   material-color("blue", "800");
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink:   #e83e8c !default;
+$red:    #dc3545 !default;
+$orange: material-color("orange", "800");
+$yellow: #ffc107 !default;
+$green:  #28a745 !default;
+$teal:   #20c997 !default;
+$cyan:   #17a2b8 !default;
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
 
 \end{document}
