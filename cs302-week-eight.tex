@@ -273,39 +273,55 @@ have been wrapped in a <span>span element</span>.</p>
       %
       \vspace*{-.15in}
       %
-    \item The fundamental components of a web page:
+    \item The values for the position of an HTML element:
       %
       \begin{itemize}
         %
-        \item {\bf Block-level elements}: content contained on their own line
+        \item {\bf Absolute}: removed from flow and placed relative to its
+          container
           %
-        \item {\bf Inline elements}: content displayed within an existing line
+        \item {\bf Fixed}: forced to stay in a specific position regardless of
+          scrolling
           %
-          \begin{itemize}
-            %
-            \item {\bf Replaced}: content defined by an external resource
-              %
-            \item {\bf Non-replaced}: content defined by an in-document
-              resources
-              %
-          \end{itemize}
+        \item {\bf Relative}: removed from flow and placed relative to first
+          location
+          %
+        \item {\bf Static}: default behavior positions an element with
+          normal flow
           %
       \end{itemize}
       %
       \vspace*{-.2in}
       %
-    \item How can you tell if a component is block-level or not?
+    \item What entity performs this placement? The web browser!
       %
       \vspace*{-.2in}
       %
-    \item How can you tell if a component is inline or not?
-      %
-      \vspace*{-.2in}
-      %
-    \item When is an element replaced versus non-replaced?
+    \item Use CSS to apply a position to an HTML element
       %
   \end{itemize}
   %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using CSS Media Queries with Fixed Positioning}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+  @media (min-width: 768px) {
+    .back-to-top {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 0rem;
+      padding: 1.25rem;
+    }
+  }
+    \end{minted}
+  \end{minipage}
+%
 \end{frame}
 
 \end{document}
