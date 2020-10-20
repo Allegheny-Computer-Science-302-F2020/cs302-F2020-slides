@@ -354,4 +354,29 @@ have been wrapped in a <span>span element</span>.</p>
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using Float Specifications in CSS}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{css}
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1.275rem;
+  text-align: left;
+  background-color: #141414;
+}
+    \end{minted}
+  \end{minipage}
+%
+\end{frame}
+
 \end{document}
