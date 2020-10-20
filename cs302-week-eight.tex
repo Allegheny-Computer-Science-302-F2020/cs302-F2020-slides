@@ -163,41 +163,101 @@
 
 % Slide
 %
-\begin{frame}{Models for Representing Colors on the Web}
+\begin{frame}{Layout of Block-Level and Inline Content}
   %
   \begin{itemize}
     %
-    \item We encode a color as a sequence of numbers
+    \item Block-level elements stack {\bf top to bottom}
       %
       \vspace*{-.2in}
       %
-    \item What are the benefits of encoding color as a number?
+    \item Inline elements layout {\bf left to right}
       %
       \vspace*{-.2in}
       %
-    \item Popular color models for web pages:
+    \item Block-level {\bf has} its own container
+      %
+      \vspace*{-.2in}
+      %
+    \item Inline content {\bf exists in} a container
+      %
+      \vspace*{-.2in}
+      %
+    \item Content layout in HTML and CSS:
       %
       \begin{itemize}
         %
-        \item {\bf RGB}: Use the hexadecimal {\tt \#RRGGBB} format
+        \item Browsers adhere to default rules for all HTML elements
           %
-        \item {\bf CYMK}: Use cyan, magenta, yellow, and black for print
-         %
-        \item {\bf HSL}: Use hue, saturation, and lightness in CSS3
-         %
-        \item We adopt the RGB color model for web development!
-         %
+        \item Web developers can modify these defaults through CSS
+          %
+        \item Incorrect redefinitions can lead to layout faults
+          %
+        \item Layout faults can manifest in layout failures!
+          %
       \end{itemize}
       %
-      \vspace*{-.25in}
-      %
-    \item You can also manipulate a color by changing its opacity
-      %
-      \vspace*{-.25in}
-      %
-    \item You can display colors differently through use of a gradient
-      %
   \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Connecting CSS Rules to HTML Content}
+  \normalsize
+  \hspace*{.15in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\small]{html}
+<p>I am a paragraph. A short one.</p>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+<p>I am another paragraph.
+Some of the <span class="block">words</span>
+have been wrapped in a <span>span element</span>.</p>
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What is the meaning of {\tt class="block"}? \\
+    %
+    \noindent  \url{https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model}
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Controlling the Display of Content with CSS}
+  \normalsize
+  \hspace*{.25in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+.block {
+  display: block;
+}
+    \end{minted}
+  \end{minipage}
+  \vspace*{.05in}
+  \begin{center}
+    %
+    \noindent What is the HTML tag that this selector styles? \\
+    %
+    \noindent Can you find the key value pairs in this CSS code? \\
+    %
+    \noindent How does {\tt display: block;} change the normal flow? \\
+    %
+    \noindent Remember, HTML elements are either {\bf block} or {\bf inline}! \\
+    %
+  \end{center}
   %
 \end{frame}
 
