@@ -1,0 +1,663 @@
+\documentclass[14pt,aspectratio=169]{beamer}
+
+\usepackage{pgfpages}
+\usepackage{fancyvrb}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usepackage{minted}
+\usemintedstyle{tango}
+
+\usepackage{graphicx}
+
+\usetheme{auriga}
+\usecolortheme{auriga}
+
+\setbeamercolor{background canvas}{bg=lightgray}
+
+% define some colors for a consistent theme across slides
+\definecolor{red}{RGB}{181, 23, 0}
+\definecolor{blue}{RGB}{0, 118, 186}
+\definecolor{gray}{RGB}{146, 146, 146}
+
+\title{Web Development: \\ Using Color and Web Media}
+
+\author{{\bf Gregory M. Kapfhammer}}
+
+\institute[shortinst]{{\bf Department of Computer Science, Allegheny College}}
+
+\begin{document}
+
+{
+  \setbeamercolor{page number in head/foot}{fg=background canvas.bg}
+  \begin{frame}
+    \titlepage
+  \end{frame}
+}
+
+% Slide
+%
+\begin{frame}{Technical Question}
+  %
+  \hspace*{.25in}
+  %
+  \vspace*{.2in}
+  %
+  \begin{minipage}{5in}
+    %
+    \begin{center}
+      %
+      {\large How can I use HTML and CSS source code to design and implement
+      multicolumn and responsive web page layouts?}
+      %
+    \end{center}
+    %
+  \end{minipage}
+  %
+  \vspace{2ex}
+  %
+  \begin{center}
+    %
+    \small Let's learn how to combine CSS and HTML to mobile-ready layouts for
+    our web pages! We will also explore the benefits of using
+    responsive web design frameworks. Make sure to review all previous content!\\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Digital Representation of Images}
+  %
+  \begin{itemize}
+    %
+    \item What is digital image? Ultimately, it is individual components that
+      are represented as binary numbers!
+      %
+      \vspace*{-.15in}
+      %
+    \item The fundamental components of a digital image:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Raster (or Bitmap) Image}: individual components are pixels
+          %
+        \item {\bf Vector Image}: individual components are vector objects
+          %
+        \item {\bf Trade-offs}: when should you pick one of these formats?
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item The pixels of a raster image can be directly manipulated
+      %
+      \vspace*{-.2in}
+      %
+    \item Browsers often provide better support for raster images
+      %
+      \vspace*{-.2in}
+      %
+    \item But, vector images are resolution independent!
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Models for Representing Colors on the Web}
+  %
+  \begin{itemize}
+    %
+    \item We encode a color as a sequence of numbers
+      %
+      \vspace*{-.2in}
+      %
+    \item What are the benefits of encoding color as a number?
+      %
+      \vspace*{-.2in}
+      %
+    \item Popular color models for web pages:
+      %
+      \begin{itemize}
+        %
+        \item {\bf RGB}: Use the hexadecimal {\tt \#RRGGBB} format
+          %
+        \item {\bf CYMK}: Use cyan, magenta, yellow, and black for print
+         %
+        \item {\bf HSL}: Use hue, saturation, and lightness in CSS3
+         %
+        \item We adopt the RGB color model for web development!
+         %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item You can also manipulate a color by changing its opacity
+      %
+      \vspace*{-.25in}
+      %
+    \item You can display colors differently through use of a gradient
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Example of Numbers that Encode Colors}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+Hex: #afaf5f
+RGB: rgb(175, 175, 95)
+HSL: hsl(60, 33.3%, 52.9%)
+Most similar:
+  darkkhaki
+  yellowgreen
+  khaki
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    Reference: \url{https://github.com/sharkdp/pastel}
+  \end{center}
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Numbers that Encode a ``Close'' Color}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+Name: darkkhaki
+Hex: #bdb76b
+RGB: rgb(189, 183, 107)
+HSL: hsl(56, 38.3%, 58.0%)
+Most similar:
+  khaki
+  tan
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    Reference: \url{https://github.com/sharkdp/pastel}
+  \end{center}
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Defining Shades in ``Sassy'' CSS Files}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{css}
+$white: #fff !default;
+$gray-100: material-color("grey", "100");
+$gray-200: material-color("grey", "200");
+$gray-300: material-color("grey", "300");
+$gray-400: material-color("grey", "400");
+$gray-500: material-color("grey", "500");
+$gray-600: material-color("grey", "600");
+$gray-700: material-color("grey", "700");
+$gray-800: material-color("grey", "800");
+$gray-900: material-color("grey", "900");
+$black: #000 !default;
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Defining Colors in ``Sassy'' CSS Files}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{css}
+$blue:   material-color("blue", "800");
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink:   #e83e8c !default;
+$red:    #dc3545 !default;
+$orange: material-color("orange", "800");
+$yellow: #ffc107 !default;
+$green:  #28a745 !default;
+$teal:   #20c997 !default;
+$cyan:   #17a2b8 !default;
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Defining Base Colors for a Web Site in SCSS}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{css}
+$primary:   $orange;
+$secondary: $gray-900;
+$success:   $green !default;
+$info:      $blue;
+$warning:   $yellow !default;
+$danger:    $red !default;
+$light:     $gray-200;
+$dark:      darken($secondary, 5%);
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Defining Color Gradients in CSS}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{css}
+.lineargradientgreen {
+  background-image:
+     linear-gradient(green, white);
+  border: solid #777;
+  border-width: 2pt 2pt 2pt 2pt;
+  display: table-cell;
+  height: 500px;
+  text-align: center;
+  vertical-align: middle;
+  width: 500px;
+}
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+
+% Slide
+%
+\begin{frame}{Basic Concepts in Color Theory}
+  %
+  \begin{itemize}
+    %
+    \item Represent colors on a wheel from ``warm'' to ``cool''
+      %
+      \vspace*{-.2in}
+      %
+    \item Use the wheel to pick the color scheme for a web site
+      %
+      \vspace*{-.2in}
+      %
+    \item Popular color scheme strategies for a web site:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Complementary}: pick colors on opposite ends of the color
+          wheel
+          %
+        \item {\bf Analogous}: pick colors next to each other on the color wheel
+          %
+        \item {\bf Triad}: pick colors in an equilateral triangle on the color
+          wheel
+          %
+        \item {\bf Tetradic}: pick colors in rectangle on the color
+          wheel
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item Other color schemes are also possible! Use tools!
+      %
+      \vspace*{-.25in}
+      %
+    \item What are the accessibility challenges for picking a color scheme? How
+      to ensure that a color scheme is accessible?
+      %
+  \end{itemize}
+ %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Understanding Image Concepts for the Web}
+  %
+  \begin{itemize}
+    %
+    \item Color depth is the maximum number of possible colors and image can
+      contain. What are the trade-offs in color depth?
+      %
+      \vspace*{-.2in}
+      %
+    \item Dithering can create the illusion of more colors in an image
+      %
+      \vspace*{-.2in}
+      %
+    \item Possibilities for image color depth:
+      %
+      \begin{itemize}
+        %
+        \item {\bf 8-bit or less}: indexed color with no more than 256 colors
+          %
+        \item {\bf 24-bit}: true color with 16.8 million colors
+          %
+        \item {\bf 32-bit}: true color with 16.8 million colors and transparency
+          %
+        \item {\bf 48-bit}: 16-bits per red, green, and blue, but not on web
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item Greater color bit-depth will reduce the banding effect
+      %
+      \vspace*{-.25in}
+      %
+    \item Resizing an image will often reduce its overall quality!
+      %
+  \end{itemize}
+ %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Display Resolution and the Number of Pixels}
+  %
+  \begin{itemize}
+    %
+    \item Display resolution refers to pixels a device can display
+      %
+      \vspace*{-.2in}
+      %
+    \item A resolution must have a height and a width component
+      %
+      \vspace*{-.2in}
+      %
+    \item What are the trade-offs associated with image resolution?
+      %
+      \vspace*{-.2in}
+      %
+    \item What are the trade-offs associated with device resolution?
+      %
+      \vspace*{-.2in}
+      %
+    \item What happens if you change the resolution of an image?
+      %
+      \begin{itemize}
+        %
+        \item Increase the resolution of an image
+          %
+        \item Decrease the resolution of an image
+          %
+        \item Examples: 1024x768 or 1920x1080
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item What is the meaning of 720p or 1080p or 4K? Good grief!
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using ImageMagick to Inspect Images}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{text}
+  Format: JPEG
+  Mime type: image/jpeg
+  Class: DirectClass
+  Geometry: 640x427+0+0
+  Resolution: 72x72
+  Print size: 8.88889x5.93056
+  Units: PixelsPerInch
+  Colorspace: sRGB
+  Type: TrueColor
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using ImageMagick to Determine Bit-Depth}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{text}
+  Depth: 8-bit
+  Channel depth:
+    Red: 8-bit
+    Green: 8-bit
+    Blue: 8-bit
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.15in}
+  \begin{center}
+    What is the overall bit depth of this image? \\
+    What was the resolution of this image? \\
+    Was this image stored in a compressed format? \\
+    What are the trade-offs of image compression? \\
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Exploring Image File Formats for the Web}
+  %
+  \begin{itemize}
+    %
+    \item There are now many different file formats for images!
+      %
+      \vspace*{-.2in}
+      %
+    \item Different file formats used to encode images:
+      %
+      \begin{itemize}
+        %
+        \item JPEG: Joint photographic experts group with lossy compression
+          %
+        \item GIF: Graphic interchange format limited to 8-bits or less
+          %
+        \item PNG: Portable network graphics format losslessly compressed
+          %
+        \item SVG: Scalable vector graphics stored in an XML file
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item XML stands for the ``eXtensible Markup Language''
+      %
+      \vspace*{-.2in}
+      %
+    \item What are the benefits of encoding an image in XML?
+      %
+      \vspace*{-.2in}
+      %
+    \item What does it look like to encode an image in an XML file?
+      %
+      \vspace*{-.2in}
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using XML to Encode Images in SVG Files}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.05in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\scriptsize]{text}
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path
+ fill="#ef6c00" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0
+ 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106
+ 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568
+ 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624
+ 19.818 1.624 9.421 0 18.843-1.3
+ 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797
+ 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492
+ 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365
+ 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934
+ 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32
+ 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122
+ 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.05in}
+  \begin{center}
+      %
+    This XML code describes the Twitter icon in the SVG format! \\
+    Can you see any color specifications inside of this XML? \\
+    Do you see any SVG tags inside of this XML? \\
+    Tools like Inkscape support the editing of SVG files!
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using XML to Encode Images in SVG Files}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.05in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\scriptsize]{text}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path
+fill="#ef6c00" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2
+2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6
+0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6
+4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8
+8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6
+17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0
+0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16
+8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3
+23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5
+62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16
+17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0
+33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496
+113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1
+1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7
+4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2
+2.3 2.3 5.2 2.6 6.5 1
+1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6
+2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Compression of the Images on a Web Site}
+  %
+  \begin{itemize}
+    %
+    \item Compression makes the size of an image smaller
+      %
+      \vspace*{-.2in}
+      %
+    \item Smaller images reduce latency and increase throughput
+      %
+      \vspace*{-.2in}
+      %
+    \item Lossy compression normally reduces image quality
+      %
+      \vspace*{-.2in}
+      %
+    \item Multiple tools support various image compressors
+      %
+      \vspace*{-.2in}
+      %
+    \item Additional resources to consider for image compression:
+      %
+      \begin{itemize}
+        %
+        \item Read {\em Essential Image Optimization} by Addy Osmani
+          %
+        \item Use image compression tools like {\tt optipng} and {\tt pngquant}
+          %
+        \item Run experiments to evaluate the trade-offs of compression
+          %
+        \item Use Lighthouse and PageSpeed insights to quantify trade-offs
+          %
+      \end{itemize}
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using Gulp to Compress a Site's Images}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.05in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{javascript}
+gulp.task('imagecompress', function() {
+  return gulp.src(IMAGES_OPTIMIZED)
+    .pipe(imagemin([
+      imagemin.optipng(),
+      imagemin.jpegtran(),
+      imageminPngquant(speed = 1),
+      imageminJpegRecompress(accurate = true,
+                             loops = 10),
+    ]))
+    .pipe(gulp.dest(IMAGES_DEST));
+});
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{MIME Types for Data Types Used on the Web}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.05in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{text}
+text/html=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+image/jpeg=feh.desktop
+image/png=feh.desktop
+application/pdf=org.pwmt.zathura.desktop
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+\end{document}
