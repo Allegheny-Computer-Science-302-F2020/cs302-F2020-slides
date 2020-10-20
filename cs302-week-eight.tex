@@ -488,4 +488,75 @@ have been wrapped in a <span>span element</span>.</p>
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Specifying a Minimum Width in a Media Query}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{css}
+@media (min-width: 576px) {
+  .dropdown-menu-sm-left {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-sm-right {
+    right: 0;
+    left: auto;
+  }
+}
+    \end{minted}
+  \end{minipage}
+%
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Specifying a Minimum Width in a Media Query}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{css}
+@media (min-width: 992px) {
+  .float-lg-left {
+    float: left !important;
+  }
+  .float-lg-right {
+    float: right !important;
+  }
+  .float-lg-none {
+    float: none !important;
+  }
+}
+    \end{minted}
+  \end{minipage}
+%
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Using Bootstrap for Responsive Web Design}
+  %
+  \begin{figure}
+    \centering
+    \includegraphics[scale=.085]{images/bootstrap-site.png}
+    \caption{The figure's caption}
+  \end{figure}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Using CSS Grid for Responsive Web Design}
+  %
+  \begin{figure}
+    \centering
+    \includegraphics[scale=.085]{images/cssgrid-site.png}
+    \caption{The figure's caption}
+  \end{figure}
+  %
+\end{frame}
+
 \end{document}
