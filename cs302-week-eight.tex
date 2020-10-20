@@ -69,41 +69,96 @@
 
 % Slide
 %
-\begin{frame}{Digital Representation of Images}
+\begin{frame}{The Normal Flow of Web Page Layout}
   %
   \begin{itemize}
     %
-    \item What is digital image? Ultimately, it is individual components that
-      are represented as binary numbers!
+    \item How does the web browser normally layout the block-level and inline
+      elements from left to right and top to bottom?
       %
       \vspace*{-.15in}
       %
-    \item The fundamental components of a digital image:
+    \item The fundamental components of a web page:
       %
       \begin{itemize}
         %
-        \item {\bf Raster (or Bitmap) Image}: individual components are pixels
+        \item {\bf Block-level elements}: content contained on their own line
           %
-        \item {\bf Vector Image}: individual components are vector objects
+        \item {\bf Inline elements}: content displayed within an existing line
           %
-        \item {\bf Trade-offs}: when should you pick one of these formats?
+          \begin{itemize}
+            %
+            \item {\bf Replaced}: content defined by an external resource
+              %
+            \item {\bf Non-replaced}: content defined by an in-document
+              resources
+              %
+          \end{itemize}
           %
       \end{itemize}
       %
       \vspace*{-.2in}
       %
-    \item The pixels of a raster image can be directly manipulated
+    \item How can you tell if a component is block-level or not?
       %
       \vspace*{-.2in}
       %
-    \item Browsers often provide better support for raster images
+    \item How can you tell if a component is inline or not?
       %
       \vspace*{-.2in}
       %
-    \item But, vector images are resolution independent!
+    \item When is an element replaced versus non-replaced?
       %
   \end{itemize}
   %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Identifying Block-Level and Inline Content}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+<h3>Photograph Reviews</h3>
+<blockquote>
+  <p><b>By Ricardo on
+     <time>February 8, 2018</time></b>
+  </p>
+  <p>That is a great photograph!</p>
+  <p>I would describe this as
+     <i class="em em---1"></i></p>
+</blockquote>
+    \end{minted}
+  \end{minipage}
+%
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Finding Replaced and Non-Replaced Content}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+
+  <a title="A Delta 757 lands at LAX
+      on January 29th. #latergram"
+  href="https://flickr.com/photos/
+        pt737swa/28371915769">
+      <img src="img/plane.jpg"/>
+  </a>
+
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    Which content would we categorize as being replaced?
+  \end{center}
 \end{frame}
 
 % Slide
