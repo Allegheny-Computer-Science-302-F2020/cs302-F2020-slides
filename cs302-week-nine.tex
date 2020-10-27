@@ -389,4 +389,66 @@ function randomLead() {
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Defining a Constructor for a JavaScript Object}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{javascript}
+function Country(name, iso,
+                 capital, population) {
+  "use strict";
+  this.name = name;
+  this.iso = iso;
+  this.capital = capital;
+  this.population = population;
+}
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Creating an Array of Objects in JavaScript}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{javascript}
+  var countries = [
+    new Country("Bahamas", "bs",
+         "Nassau", 301790),
+    new Country("Canada", "ca",
+         "Ottawa", 33679000),
+    new Country("Germany", "de",
+         "Berlin", 81802257)
+  ];
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Adding to an Array of Objects in JavaScript}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{javascript}
+countries.push(new
+               Country("Spain", "es",
+                "Madrid", 46505963));
+
+countries.push(new
+               Country("United Kingdom", "gb",
+                "London", 62348447));
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
 \end{document}
