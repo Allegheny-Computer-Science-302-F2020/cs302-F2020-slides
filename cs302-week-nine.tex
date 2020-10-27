@@ -359,7 +359,7 @@ function randomLead() {
   %
   \begin{itemize}
     %
-    \item The JavaScript was stored in an {\bf external} fashion
+    \item The JavaScript was stored in an {\bf embedded} fashion
       %
       \vspace*{-.15in}
       %
@@ -448,6 +448,123 @@ countries.push(new
                 "London", 62348447));
     \end{minted}
   \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Iterating Through an Array of Objects}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{javascript}
+  for (var i = 0; i < countries.length; i++) {
+    var c = countries[i];
+    document.write("<div class='box'>");
+    document.write("<img
+                     src='img/flags/" +
+                     c.iso +
+                     ".png'
+                     class='boxImg'>");
+  }
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    The {\tt for} loop iterates through the array and displays content!
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Iterating Through the Properties of an Object}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{javascript}
+  for (var propertyName in c) {
+    document.write("<strong>");
+    document.write(propertyName + ": ");
+    document.write("</strong>");
+    document.write(c[propertyName]);
+    document.write("<br>");
+  }
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    The {\tt for} loop iterates through the properties of current country \\
+    Using {\tt document.write} modifies the HTML of the web page \\
+    What are the benefits of using JavaScript to generate HTML?
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Summary of the JavaScript with Objects}
+  %
+  \begin{itemize}
+    %
+    \item The JavaScript was stored in an {\bf external} fashion
+      %
+      \vspace*{-.15in}
+      %
+    \item The {\tt countries} variable is an {\bf array} of {\tt
+      Country} objects
+      %
+      \vspace*{-.15in}
+      %
+    \item The {\tt for} loop iterates through the contents of an array
+      %
+      \vspace*{-.15in}
+      %
+    \item The {\tt for} loop iterates through the contents of an object
+      %
+      \vspace*{-.15in}
+      %
+    \item The {\tt document.write()} function changes the web page
+      %
+      \vspace*{-.15in}
+      %
+    \item Any questions about this example? Note that the HTML and the
+      JavaScript work together to achieve a code generation! Styling with CSS is
+      also possible!
+      %
+      \vspace*{-.15in}
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Learn More about JavaScript}
+  %
+  \begin{figure}
+    \centering
+    \includegraphics[scale=.085]{images/eloquent-javascript.png}
+    \caption{The figure's caption}
+  \end{figure}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{learn more about javascript and jQuery}
+  %
+  \begin{figure}
+    \centering
+    \includegraphics[scale=.085]{images/javascript-book.png}
+    \caption{The figure's caption}
+  \end{figure}
   %
 \end{frame}
 
