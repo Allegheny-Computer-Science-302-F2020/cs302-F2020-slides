@@ -268,10 +268,10 @@
 % Slide
 %
 \begin{frame}[fragile]
-  \frametitle{Identifying Block-Level and Inline Content}
+  \frametitle{Changing an HTML File with JavaScript}
   \normalsize
   \begin{minipage}{6in}
-    \vspace*{.1in}
+    \vspace*{.2in}
     \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
 <div class="jumbotron">
 <h1><em>Hello</em> my name is
@@ -282,7 +282,63 @@ document.write(randomLead());
 </div>
     \end{minted}
   \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    What is the definition of the {\tt randomLead()} function?
+  \end{center}
+  %
+\end{frame}
+
+% Slide
 %
+\begin{frame}[fragile]
+  \frametitle{Defining an Array of Strings in JavaScript}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{javascript}
+var lead = [
+'<p class="lead">Oh, and I accent the
+ <a href="https://github.com/AVMf/avmf">
+    AVMf</a>.</p>',
+'<p class="lead">Oh, and I predict with
+ <a href="https://github.com/Tada-Project/tada">
+    tada</a>.</p>',
+];
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    The {\tt lead} variable is an array that contains strings of HTML!
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Randomly Selecting a String from the Array}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+
+<script type="text/javascript">
+var lead = [ ... ]
+
+function randomLead() {
+   return lead[Math.floor(Math.random()
+     * lead.length)];
+}
+</script>
+
+    \end{minted}
+  \end{minipage}
+  %
 \end{frame}
 
 \end{document}
