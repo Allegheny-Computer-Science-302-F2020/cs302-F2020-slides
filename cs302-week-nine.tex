@@ -71,45 +71,119 @@
 
 % Slide
 %
-\begin{frame}{The Normal Flow of Web Page Layout}
+\begin{frame}{What is the JavaScript Programming Language?}
   %
   \begin{itemize}
     %
-    \item How does the web browser normally layout the block-level and inline
-      elements from left to right and top to bottom?
+    \item Ullman: object-oriented, dynamically typed scripting language. What
+      does each of these words mean?
       %
       \vspace*{-.15in}
       %
-    \item The fundamental components of a web page:
+    \item The characteristics of the JavaScript language:
       %
       \begin{itemize}
         %
-        \item {\bf Block-level elements}: content contained on their own line
+        \item {\bf Object-oriented}: almost everything in the language is an
+          object
           %
-        \item {\bf Inline elements}: content displayed within an existing line
+        \item {\bf Dynamically typed}: you can convert the types of variables
           %
-          \begin{itemize}
-            %
-            \item {\bf Replaced}: content defined by an external resource
-              %
-            \item {\bf Non-replaced}: content defined by an in-document
-              resources
-              %
-          \end{itemize}
+        \item {\bf Scripting language}: small scripts run on the side of the client
           %
       \end{itemize}
       %
       \vspace*{-.2in}
       %
-    \item How can you tell if a component is block-level or not?
+    \item An object has both {\bf state} and {\bf behavior}
       %
       \vspace*{-.2in}
       %
-    \item How can you tell if a component is inline or not?
+    \item Variables change their types through {\bf type conversion}
       %
       \vspace*{-.2in}
       %
-    \item When is an element replaced versus non-replaced?
+    \item Many argue that JavaScript is for more than scripting!
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Client-Side Scripting with JavaScript}
+  %
+  \begin{itemize}
+    %
+    \item Client-side scripting means that the JavaScript executes in the web
+      browser. What are the benefits of this approach?
+      %
+      \vspace*{-.15in}
+      %
+    \item The benefits of client-side JavaScript execution:
+      %
+      \begin{itemize}
+        %
+        \item Processing can be offloaded from the server improves speed
+          %
+        \item Rapid response by the browser improves user experience
+          %
+        \item JavaScript can dynamically manipulate the HTML and CSS
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item What if the browser does not support JavaScript?
+      %
+      \vspace*{-.2in}
+      %
+    \item What if there is a defect in the JavaScript?
+      %
+      \vspace*{-.2in}
+      %
+    \item What if the web page uses too much JavaScript?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Where Does the JavaScript Live?}
+  %
+  \begin{itemize}
+    %
+    \item The HTML source code must be able to reference the JavaScript. Where
+      should we put the JavaScript?
+      %
+      \vspace*{-.15in}
+      %
+    \item The location of JavaScript in a web site:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Inline}: include the JavaScript directly in the HTML
+          attributes
+          %
+        \item {\bf Embedded}: place the JavaScript within a {\tt <script>}
+          region
+          %
+        \item {\bf External}: place the JavaScript in files referenced by HTML
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item What are the trade-offs of these different approaches?
+      %
+      \vspace*{-.2in}
+      %
+    \item How can fail-safe design enable web accessibility?
+      %
+      \vspace*{-.2in}
+      %
+    \item What are the overall pros and cons of using JavaScript?
       %
   \end{itemize}
   %
