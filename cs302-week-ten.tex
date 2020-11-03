@@ -301,6 +301,111 @@ function randomLead() {
 
 % Slide
 %
+\begin{frame}{Event Types in JavaScript}
+  %
+  \begin{itemize}
+    %
+    \item JavaScript programs can respond to a wide array of events related to
+      page lifecycle or many types of user interaction
+      %
+      \vspace*{-.15in}
+      %
+    \item Overview of JavaScript events, with specific examples:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Mouse Events}: was the mouse clicked or moved?
+          %
+        \item {\bf Keyboard Events}: was a key pressed or released?
+          %
+        \item {\bf Touch Events}: was the screen touched and how?
+          %
+        \item {\bf Form Events}: was focused changed or form submitted?
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item Event-based programming requires JavaScript to listen for the event
+      and then respond when the event occurs
+      %
+      \vspace*{-.25in}
+      %
+    \item Not all events are supported by all browsers and devices!
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Using JavaScript for Form Validation}
+  %
+  \begin{itemize}
+    %
+    \item JavaScript programs can respond to form movement events as a person
+      completes fields in the form
+      %
+      \vspace*{-.15in}
+      %
+    \item Strategies for validation a submitted form with JavaScript:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Empty Fields}: ensure that all required fields have content
+          %
+        \item {\bf Number Validation}: ensure that numbers are in range
+          %
+        \item {\bf Text Validation}: ensure that text is of a required length
+          %
+        \item {\bf Content Validation}: ensure that content has correct form
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item Why should we validate form inputs with JavaScript?
+      %
+      \vspace*{-.25in}
+      %
+    \item Different browsers display form validation output in different ways.
+      Browsers also vary validation defaults!
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{AJAX: Asynchronous JavaScript and XML}
+  %
+  \begin{itemize}
+    %
+    \item What are the drawbacks of the HTTP request-response loop? Influence on
+      the response time and user perception?
+      %
+      \vspace*{-.35in}
+      %
+    \item What if the browser could asynchronously return additional data in the
+      form of objects encoded in either JSON or XML? What are the benefits of
+      this approach?
+      %
+      \vspace*{-.15in}
+      %
+    \item When a person interacts with the page and requests a screen update,
+      the JavaScript can consult the JSON or the XML instead of making another
+      request to the server!
+      %
+      \vspace*{-.15in}
+      %
+    \item What are the overall benefits and drawbacks of AJAX-based sites?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
 \begin{frame}{JavaScript Linters Can Find and Fix Problems}
   %
   \begin{itemize}
@@ -383,6 +488,44 @@ function randomLead() {
 }
     \end{minted}
   \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Automated Testing with JavaScript Tools}
+  %
+  \begin{itemize}
+    %
+    \item JavaScript programs are complicated and often challenging to
+      implement, test, and debug. Any assistants to help?
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf JavaScript testing framework}: tool to run source code and check
+      output for correctness.
+      %
+      \vspace*{-.15in}
+      %
+    \item Overview of JavaScript testing framework and their use:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Environment}: command-line or integrated into your editor
+          %
+        \item {\bf Jest}: Developed by Facebook and suitable for React
+          %
+        \item {\bf Mocha}: Supports both NodeJS and browser JavaScript
+          %
+        \item {\bf Jasmine}: Framework-independent JavaScript testing
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item Refer to \url{https://stateofjs.com/} to learn more!
+      %
+  \end{itemize}
   %
 \end{frame}
 
