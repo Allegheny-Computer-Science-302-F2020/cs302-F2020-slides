@@ -145,7 +145,61 @@
 % Slide
 %
 \begin{frame}[fragile]
-  \frametitle{Changing an HTML File with JavaScript}
+  \frametitle{JavaScript Selection of Content by Tag}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{javascript}
+const paragraphs =
+    document.querySelectorAll("p");
+alert(paragraphs[0].nodeName);
+alert(paragraphs[0].nodeType);
+alert(paragraphs[0].nodeValue);
+alert(paragraphs[0].textContent);
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    The {\tt querySelectorAll} returns all matching tags \\
+    In this example {\tt paragraphs[0]} is the first {\tt <p>} \\
+    The nodes have properties like {\tt nodeName} and {\tt textContent} \\
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{JavaScript Selection of Content by Identifier}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+<p id="demo"></p>
+
+<script>
+  document.getElementById("demo").
+              innerHTML = 5 + 6;
+</script>
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    The {\tt getElementById} returns an element with an {\tt id} \\
+    Using {\tt innerHTML} let's you modify the generated content \\
+    This means that a page's HTML content can now be dynamic! \\
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Dynamically Changing a Page with JavaScript}
   \normalsize
   \begin{minipage}{6in}
     \vspace*{.2in}
@@ -239,8 +293,9 @@ function randomLead() {
     This JavaScript is inline! \\
     Responds to the page loading event \\
     Creates a message in the browser window \\
+    Modifies the user's experience when browsing \\
   \end{center}
-
+  %
 \end{frame}
 
 \end{document}
