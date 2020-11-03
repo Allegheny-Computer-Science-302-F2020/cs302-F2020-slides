@@ -294,7 +294,95 @@ function randomLead() {
     Responds to the page loading event \\
     Creates a message in the browser window \\
     Modifies the user's experience when browsing \\
+    Any questions about JavaScript programming? \\
   \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{JavaScript Linters Can Find and Fix Problems}
+  %
+  \begin{itemize}
+    %
+    \item JavaScript programs are complicated and often challenging to
+      implement, test, and debug. Any assistants to help?
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf JavaScript linter}: tool to check the source code for both
+      syntactical and stylistic correctness. Benefits? Drawbacks?
+      %
+      \vspace*{-.35in}
+      %
+    \item Overview of JavaScript linters and their use:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Environment}: Web-based tools or integrated into your editor
+          %
+        \item {\bf JSLint}: One of the earliest linting tools
+          %
+        \item {\bf JSHint}: Originated from JSLint in 2010
+          %
+        \item {\bf ESLint}: Extensible linter that can fix problems
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item What are the specific trade-offs with these tools?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Configuring the ESLint JavaScript Linting Tool}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{javascript}
+{
+  "extends": "gulp",
+  "globals": {
+    "expect": true
+  },
+  "rules": {
+    "max-len": [2, {"code": 180,
+                    "tabWidth": 4,
+                    "ignoreUrls": true}]
+  }
+}
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Configuring the ESLint JavaScript Linting Tool}
+  \normalsize
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{javascript}
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "prettier",
+    "prettier/react"
+  ],
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  }
+}
+    \end{minted}
+  \end{minipage}
   %
 \end{frame}
 
