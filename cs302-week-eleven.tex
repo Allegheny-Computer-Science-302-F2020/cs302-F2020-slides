@@ -298,5 +298,111 @@ window.addEventListener('load', () => {
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Importing React Components from Spectacle}
+  \normalsize
+  \hspace*{-.2in}
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{javascript}
+import React, { Component } from 'react';
+import styled from 'react-emotion';
+import {
+  Anim,
+  Appear,
+  BlockQuote,
+  Cite,
+  Code,
+} from 'spectacle';
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Importing React Components from Spectacle}
+  \normalsize
+  \hspace*{-.2in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{javascript}
+const images = {
+  TabCompletion: require('Complete.gif'),
+  Linting: require('Linting.gif'),
+  FixHardcode: require('FixHardcode.gif'),
+  FuzzyFile: require('FuzzyFile.gif'),
+};
+preloader(images);
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    Pre-load images to be used later in the presentation \\
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Declare Variables in a JavaScript Program}
+  \normalsize
+  \hspace*{.2in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{javascript}
+var primary = '#FFF8DC';
+var secondary = '#F4511E';
+var secondarylight = '#FF6E40';
+var tertiary = '#00897B';
+var lighttext = '#9E9E9E';
+var darktext = '#424242';
+var lighttext = '#9E9E9E';
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    Global variables of colors for use throughout the program \\
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Define a Theme for the Visual Display}
+  \normalsize
+  \hspace*{-.05in}
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{javascript}
+import { library } from
+ '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from
+ '@fortawesome/react-fontawesome'
+import { fab } from
+ '@fortawesome/free-brands-svg-icons'
+import { far } from
+ '@fortawesome/free-regular-svg-icons'
+import { fas } from
+ '@fortawesome/free-solid-svg-icons'
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.05in}
+  %
+  \begin{center}
+     Load existing packages for include FontAwesome icons
+  \end{center}
+  %
+\end{frame}
 
 \end{document}
