@@ -378,7 +378,7 @@ var lighttext = '#9E9E9E';
 % Slide
 %
 \begin{frame}[fragile]
-  \frametitle{Define a Theme for the Visual Display}
+  \frametitle{Import a Package to Support Icon Reuse}
   \normalsize
   \hspace*{-.05in}
   \begin{minipage}{6in}
@@ -402,6 +402,170 @@ import { fas } from
   \begin{center}
      Load existing packages for include FontAwesome icons
   \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Creating a new Variable Containing HTML}
+  \normalsize
+  \hspace*{-.05in}
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{javascript}
+export const Twitter = () => (
+    <FontAwesomeIcon icon={['fab', 'twitter']}
+                     size="3x"
+                     transform="left-2"
+                     color='#00897B'/>
+)
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.05in}
+  %
+  \begin{center}
+     Colors the icons from the FontAwesome package for use in app \\
+     Transforms the icons by changing their size and padding \\
+     Creates a variable for use later in the React application! \\
+     Questions about how to import and use React components?
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Instantiating a React Component in JavaScript}
+  \normalsize
+  \hspace*{.2in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{javascript}
+<Deck
+  contentHeight={700}
+  contentWidth={1024}
+  transition={['slide']}
+  transitionDuration={750}
+  theme={theme}
+  controls={false}
+  progress={'none'}
+>
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using React Components in JSX}
+  \normalsize
+  \hspace*{-.1in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\large]{html}
+<Layout>
+  <Fill>
+    <Text bold fit textColor="secondary">
+      Gregory M. Kapfhammer
+    </Text>
+  </Fill>
+</Layout>
+    \end{minted}
+  \end{minipage}
+  %
+  \vspace*{.1in}
+  %
+  \begin{center}
+    These tags don't exist in HTML! These are React components! \\
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Using React Components and Variables in JSX}
+  \normalsize
+  \hspace*{.1in}
+  \begin{minipage}{6in}
+    \vspace*{.2in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{html}
+<Layout>
+  <Fit>
+    <Twitter />
+  </Fit>
+  <Fit>
+    <Text fill bold textSize="2em"
+          textColor="tertiary">
+      @GregKapfhammer
+    </Text>
+  </Fit>
+</Layout>
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}[fragile]
+  \frametitle{Configuring React Components in JSX}
+  \normalsize
+  \hspace*{.1in}
+  \begin{minipage}{6in}
+    \vspace*{.1in}
+    \begin{minted}[mathescape, numbersep=5pt, fontsize=\normalsize]{html}
+<Layout>
+  <Fill>
+    <Backpack size={400}
+              mood="blissful"
+              color="#4DB6AC"/>
+  </Fill>
+  <Fill>
+    <Cat size={400}
+         mood="blissful"
+         color="#FF8A65"/>
+  </Fill>
+</Layout>
+    \end{minted}
+  \end{minipage}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Insights from Using React Components}
+  %
+  \begin{itemize}
+    %
+    \item React provides many valuable components for reuse
+      %
+      \vspace*{-.15in}
+      %
+    \item You normally must install each component using {\tt npm}
+      %
+      \vspace*{-.15in}
+      %
+    \item React uses a combination of JavaScript and XML called JSX
+      %
+      \vspace*{-.35in}
+      %
+    \item React feels like programming in both HTML and JavaScript!
+      %
+      \vspace*{-.35in}
+      %
+    \item Sometimes it is hard to know where to start! What components are
+      available? Which ones should I pick? How do I create one? How do I use it?
+      What if I have problems?
+      %
+      \vspace*{-.15in}
+      %
+    \item Questions about JavaScript programming with React?
+      %
+  \end{itemize}
   %
 \end{frame}
 
