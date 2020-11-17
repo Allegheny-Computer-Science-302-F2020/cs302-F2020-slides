@@ -71,35 +71,36 @@
 
 % Slide
 %
-\begin{frame}{Pros and Cons of Software Frameworks}
+\begin{frame}{You Need to ``Build in Security'' for the Web}
   %
   \begin{itemize}
     %
-    \item {\bf Software Framework}: a reusable library of code and documentation
-      that a developer uses to simplify, improve, and facilitate the process of
-      creating an application
+    \item It is tempting to ``bolt on'' security after finishing a web site
       %
       \vspace*{-.15in}
       %
-    \item What are the pros and cons of JavaScript frameworks?
+    \item We can make security mistakes throughout development!
       %
-      \begin{itemize}
-        %
-        \item {\bf Pro}: reusing a component reduces development time
-          %
-        \item {\bf Con}: understanding a reusable component takes time
-          %
-        \item {\bf Pro}: an active community can answer questions
-          %
-        \item {\bf Con}: framework popularity changes rapidly
-          %
-      \end{itemize}
+      \vspace*{-.15in}
       %
-      \vspace*{-.25in}
+    \item Patched systems are often less elegant and maintainable
       %
-    \item You may pick a JavaScript framework, start to use it, and then decide
-      it is not a good fit! Developers face technical constraints, so how do you
-      pick the ``best'' framework?
+      \vspace*{-.15in}
+      %
+    \item Web sites also have many attack vectors to consider
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Information Security}: practice of protecting information
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Information Assurance}: ensures that data is not lost
+      %
+      \vspace*{-.15in}
+      %
+    \item What are the best practices that promote secure web sites? What are
+      the tools and protocols that aid security?
       %
   \end{itemize}
   %
@@ -107,34 +108,78 @@
 
 % Slide
 %
-\begin{frame}{npm: The Node Package Manager}
+\begin{frame}{Pros and Cons of Software Frameworks}
   %
   \begin{itemize}
     %
-    \item How do you install a JavaScript package on your laptop?
+    \item {\bf ISO/IEC Security Standard}: a detailed security standard
+      containing details about risk assessment and management, security
+      policies, and security best practices
       %
       \vspace*{-.15in}
       %
-    \item The Node Package Manager is a command-line application that supports
-      the installation of JavaScript packages
+    \item The {\bf CIA} triad of information security
       %
-      \vspace*{-.15in}
+      \begin{itemize}
+        %
+        \item {\bf Confidentiality}: maintain privacy of all site data
+          %
+        \item {\bf Integrity}: ensure data is accurate and correct
+          %
+        \item {\bf Availability}: make data available to authorized people
+          %
+      \end{itemize}
       %
-    \item You will often use {\tt npm} even if you are not doing server-side
-      JavaScript development!
+      \vspace*{-.25in}
       %
-      \vspace*{-.15in}
+    \item {\bf High Availability Web Site}: A web site that contains redundant
+      systems that can ensure a high uptime
       %
-    \item For instance {\tt npm install --save quicklink} will install the
-      Quicklink package on any web site!
+      \vspace*{-.25in}
       %
-      \vspace*{-.15in}
-      %
-    \item How would you use the JavaScript package installed by {\tt npm}? How
-      to ensure that JavaScript is available in HTML?
+    \item Changelog podcast hosts take down their own web site to show
+      availability: \url{https://bit.ly/3pFDe1E}
       %
   \end{itemize}
   %
 \end{frame}
+
+% Slide
+%
+\begin{frame}{Security Threats Faced by Web Sites}
+  %
+  \begin{itemize}
+    %
+    \item {\bf Security Threat}: a particular path that a hacker could use to
+      exploit a vulnerability and gain unauthorized access
+      %
+      \vspace*{-.15in}
+      %
+    \item The {\bf STRIDE} threat classification system:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Spoofing}: use another's information to access site
+          %
+        \item {\bf Tampering}: modify site data in authorized fashion
+          %
+        \item {\bf Repudiation}: remove all traces of attack on site
+          %
+        \item {\bf Information disclosure}: access non-permitted data
+          %
+        \item {\bf Denial of Service}: prevent real users from attacking system
+          %
+        \item {\bf Elevation of Privilege}: increase rights to access site
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item {\bf Security Vulnerabilities}: the security ``holes'' in your system 
+      %
+  \end{itemize}
+  %
+\end{frame}
+
 
 \end{document}
