@@ -45,7 +45,7 @@
   %
   \begin{minipage}{5in}
     %
-    \vspace*{.5in}
+    \vspace*{.25in}
     %
     \begin{center}
       %
@@ -56,14 +56,14 @@
     %
   \end{minipage}
   %
-  \vspace{1ex}
+  \vspace{2ex}
   %
   \begin{center}
     %
     \small This week's focus is less on teaching you how to write secure code
-    and more about raising an awareness of the principles and best practices in
-    the field of computer security. Try to find ways to apply these principles
-    to the development of your own web sites! \\
+    and more about raising your awareness concerning the principles and best
+    practices in the field of computer security. Try to find ways to apply these
+    principles to the development of your own web sites! \\
     %
   \end{center}
   %
@@ -175,11 +175,173 @@
       %
       \vspace*{-.25in}
       %
-    \item {\bf Security Vulnerabilities}: the security ``holes'' in your system 
+    \item {\bf Security Vulnerabilities}: the security ``holes'' in your system
       %
   \end{itemize}
   %
 \end{frame}
 
+% Slide
+%
+\begin{frame}{Authentication and Authorization}
+  %
+  \begin{itemize}
+    %
+    \item {\bf Authentication}: is a user of the site who they say they are?
+      %
+      \vspace*{-.4in}
+      %
+    \item {\bf Authorization}: can a user of site perform an action?
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Security Policies} for a web site:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Usage Policy}: what systems a person can use
+          %
+        \item {\bf Authentication Policy}: how users are granted access
+          %
+        \item {\bf Legal Policy}: binding rules for maintainers and users
+          %
+      \end{itemize}
+      %
+      \vspace*{-.2in}
+      %
+    \item Are password rotation policies effective security policies?
+      %
+      \vspace*{-.2in}
+      %
+    \item Should every person be required to use two-factor auth?
+      %
+      \vspace*{-.2in}
+      %
+    \item What are the cost-benefit trade-offs of different policies?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Security by Design for Web Sites}
+  %
+  \begin{itemize}
+    %
+    \item {\bf Secure by Design}: apply software engineering principles
+      throughout the life cycle of web site development
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Requirements}: privacy needs, security policy, CIA triad
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Design}: threat and risk assessment, redundancy planning
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Implementation}: pairs, code reviews, defensive code
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Testing}: security and vulnerability tests, correctness
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Deployment}: penetration testing, internal attacks
+      %
+      \vspace*{-.15in}
+      %
+    \item Take the software engineering course to learn more!
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{User Authentication for the Web}
+  %
+  \begin{itemize}
+    %
+    \item {\bf Single-factor} versus {\bf two-factor} authentication
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Authentication Factors} for a web site:
+      %
+      \begin{itemize}
+        %
+        \item {\bf Knowledge}: information belonging to a specific person
+          %
+        \item {\bf Ownership}: items that a specific person possesses
+          %
+        \item {\bf Inherence}: intrinsic properties connected to a
+          person
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item {\bf Browsers} and {\bf forms} can provide authentication!
+      %
+      \vspace*{-.25in}
+      %
+    \item {\bf Oauth} protocol provides a standard way to authorize a user for a
+      web site or a mobile application
+      %
+      \vspace*{-.25in}
+      %
+    \item User authentication is challenging! Rely on previously vetted tools!
+      Use different factors whenever possible!
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{User Authorization for the Web}
+  %
+  \begin{itemize}
+    %
+    \item {\bf Authorization} defines the rights, privileges, and actions a
+      person has when interacting with a web site
+      %
+      \vspace*{-.15in}
+      %
+    \item Authentication gives access, authorization allows behavior
+      %
+      \vspace*{-.15in}
+      %
+    \item {\bf Principle of Least Privilege} for a web site's server:
+      %
+      \begin{itemize}
+        %
+        \item Define different privilege levels for types of users
+          %
+        \item Start a user at the ``least'' level of privilege
+          %
+        \item Elevate privilege only when required for an action
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item The {\bf root} and {\bf sudo} commands on a web server
+      %
+      \vspace*{-.25in}
+      %
+    \item The benefits and drawbacks of running a process as root?
+      %
+      \vspace*{-.25in}
+      %
+    \item {\bf Security audit} to assess authentication and authorization
+      %
+  \end{itemize}
+  %
+\end{frame}
 
 \end{document}
