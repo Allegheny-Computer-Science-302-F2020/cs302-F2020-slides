@@ -1,0 +1,139 @@
+\documentclass[14pt,aspectratio=169]{beamer}
+
+\usepackage{pgfpages}
+\usepackage{fancyvrb}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usepackage{minted}
+\usemintedstyle{tango}
+
+\usepackage{graphicx}
+
+\usetheme{auriga}
+\usecolortheme{auriga}
+
+\setbeamercolor{background canvas}{bg=lightgray}
+
+% define some colors for a consistent theme across slides
+
+\definecolor{red}{RGB}{181, 23, 0}
+\definecolor{blue}{RGB}{0, 118, 186}
+\definecolor{gray}{RGB}{146, 146, 146}
+
+\title{Web Development: \\ Understanding and Applying\\ Security Principles}
+
+\author{{\bf Gregory M. Kapfhammer}}
+
+\institute[shortinst]{{\bf Department of Computer Science, Allegheny College}}
+
+\begin{document}
+
+{
+  \setbeamercolor{page number in head/foot}{fg=background canvas.bg}
+  \begin{frame}
+    \titlepage
+  \end{frame}
+}
+
+% Slide
+%
+\begin{frame}{Technical Question}
+  %
+  \hspace*{.15in}
+  %
+  \begin{minipage}{5in}
+    %
+    \vspace*{.5in}
+    %
+    \begin{center}
+      %
+      {\large How can I use JavaScript frameworks for back-end and front-end
+      web development?}
+      %
+    \end{center}
+    %
+  \end{minipage}
+  %
+  \vspace{1ex}
+  %
+  \begin{center}
+    %
+    \small Let's learn how to use JavaScript frameworks to created advanced web
+    applications! Since this week's material assumes prior knowledge, make sure
+    to review all previous content about HTML, CSS, and JavaScript! \\
+    %
+  \end{center}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{Pros and Cons of Software Frameworks}
+  %
+  \begin{itemize}
+    %
+    \item {\bf Software Framework}: a reusable library of code and documentation
+      that a developer uses to simplify, improve, and facilitate the process of
+      creating an application
+      %
+      \vspace*{-.15in}
+      %
+    \item What are the pros and cons of JavaScript frameworks?
+      %
+      \begin{itemize}
+        %
+        \item {\bf Pro}: reusing a component reduces development time
+          %
+        \item {\bf Con}: understanding a reusable component takes time
+          %
+        \item {\bf Pro}: an active community can answer questions
+          %
+        \item {\bf Con}: framework popularity changes rapidly
+          %
+      \end{itemize}
+      %
+      \vspace*{-.25in}
+      %
+    \item You may pick a JavaScript framework, start to use it, and then decide
+      it is not a good fit! Developers face technical constraints, so how do you
+      pick the ``best'' framework?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+% Slide
+%
+\begin{frame}{npm: The Node Package Manager}
+  %
+  \begin{itemize}
+    %
+    \item How do you install a JavaScript package on your laptop?
+      %
+      \vspace*{-.15in}
+      %
+    \item The Node Package Manager is a command-line application that supports
+      the installation of JavaScript packages
+      %
+      \vspace*{-.15in}
+      %
+    \item You will often use {\tt npm} even if you are not doing server-side
+      JavaScript development!
+      %
+      \vspace*{-.15in}
+      %
+    \item For instance {\tt npm install --save quicklink} will install the
+      Quicklink package on any web site!
+      %
+      \vspace*{-.15in}
+      %
+    \item How would you use the JavaScript package installed by {\tt npm}? How
+      to ensure that JavaScript is available in HTML?
+      %
+  \end{itemize}
+  %
+\end{frame}
+
+\end{document}
